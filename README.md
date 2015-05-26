@@ -6,6 +6,7 @@ A client + node server made to host and run games of KAOS/Assassins. Developed p
 - LESS/CSS Styles
 - Bootstrap
 - Jade Templating
+- jQuery
 
 #Server-Side Construction#
 - Node
