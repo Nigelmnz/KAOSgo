@@ -19,7 +19,7 @@ app.use(express.compress());
 if ('test' === global.env) {
 	dbURI = 'TEST_MONGODB_HERE'; //DB
 	app.use(express.errorHandler());
-	newrelic = require('newrelic');
+	// newrelic = require('newrelic');
 	app.use(minify());
 } else if ('development' === global.env) {
 	dbURI = 'DEV_MONGODB_HERE' ;
