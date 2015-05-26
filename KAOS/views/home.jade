@@ -1,0 +1,47 @@
+extends layout
+
+block scripts
+	script(src='/js/home.js')
+	script(src='/js/tools.js')
+		
+block content
+	#page-container.row
+		include parts/homeBar
+		include parts/hostingGuide
+		include parts/williamsStandard
+
+		h1 You are not in a game.
+		#noGamePage(style="display: none;")
+
+			#buttonSpace.row
+				button#btn-hostgame.btn.btn-primary.col-md-6.col-xs-12
+							| Host Game
+				button#btn-joingame.btn.btn-primary.col-md-6.col-xs-12
+							| Find a Game
+
+			//- Options for Hosting
+			#hostGame.homeOption(style="display: none;")
+				p Create some KAOS:
+				form#hostForm.form-horizontal
+					#sec.form-group
+						label(for="name-tf").col-md-2.control-label Game Name:
+						.col-md-10
+							input(type='text', name='name', id='name-tf', placeholder='Eg: KAOS University').form-control
+
+					#sec.form-group
+						label(for="url-tf").col-md-2.control-label URL Extension:
+						.col-md-10
+							input(type='text', name='url', id='url-tf', placeholder='Eg: kaos-u').form-control
+					button#btn-hostguide.btn.btn-primary.col-md-6.col-xs-12
+							| Guide to Hosting KAOS
+					button#btn-rulesguide.btn.btn-primary.col-md-6.col-xs-12
+							| Rules of KAOS
+					button#createGame(type="submit").btn.btn-primary
+						|Create Game
+
+			//- List of available games
+			#joinGame.homeOption(style="display: none;")
+				p Find some KAOS:
+				#gameList.list-group
+
+		include parts/alert

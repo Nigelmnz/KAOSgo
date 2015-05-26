@@ -1,0 +1,5 @@
+//- An alert that can be brought up using external JS. Has an inline fadeout button
+
+.alert.alert-warning.alert-dismissable(style="display: none;")
+	button.close(onclick="$('.alert').fadeOut()") &times;
+	p alert

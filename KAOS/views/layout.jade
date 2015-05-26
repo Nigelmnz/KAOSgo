@@ -1,0 +1,33 @@
+doctype 5
+html
+	head	
+		title= title
+		//- meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0, minimum-scale=0.5")
+		meta(name="description" content="KAOSgo allows you to host and play live action games of KAOS/Assassins.")
+		meta(name="keywords" content="Assassin, Assassins, KAOS, Killing, As, Organized, Sport, Hosting, Running, Play, Playing, Service, Free, Runner, Run, College, Game, Live, Action, Role, Play, Roleplay")
+		meta(name="fb:admins" content="")
+
+		//- Styles
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+		link(rel="stylesheet", type="text/css", href="/css/buttons.css")
+		link(rel="stylesheet", type="text/css", href="/css/style.css")
+
+		//-Fonts
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic')
+		link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css",rel="stylesheet")
+
+
+		//- Scripts
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+		script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+		script(src='//malsup.github.io/min/jquery.form.min.js')
+		script(src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js')
+		//- script(src='/js/google_analytics.js')
+		//- script(src='/js/facebook_likes.js')
+
+	body
+		block scripts
+		#wrap
+			#main
+				block content
+		include footer

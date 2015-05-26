@@ -1,0 +1,10 @@
+#modMessageModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h2 Edit Global Message
+      #insideModal.modal-body
+        textarea#form-control#modMesgArea(rows='8') 
+      .modal-footer
+        button#confirmAction.btn.btn-default(type='button', data-dismiss='modal') Submit
+        button#cancelAction.btn.btn-default(type='button', data-dismiss='modal') Nevermind

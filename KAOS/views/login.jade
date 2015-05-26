@@ -1,0 +1,46 @@
+extends layout
+
+block scripts
+	script(src='/js/login.js')
+	script(src='/js/form-validators/loginValid.js')
+	script(src='/js/form-validators/emailValid.js')
+	script(src='/js/form-validators/acctValid.js')
+	script(src='/js/tools.js')
+block content
+	include parts/passwordModal
+	include parts/lostPasswordModal
+
+	#login-page
+		#login-container
+			#form-container
+				h1#logo KAOS
+				form( method="post")#login-form
+					#forms
+						#form-signin
+							input(type='text', name='user', id='user-tf', placeholder='Username').col-md-12.col-xs-12
+							input(type='password', name='pass', id='pass-tf' placeholder='Password').col-md-12.col-xs-12
+						#form-signup(style="display: none;")
+							input(type='password', name='pass_c', id='pass-tf-c' placeholder='Confirm Password').col-md-12.col-xs-12
+							input(type='text', name='email', id='email-tf' placeholder='Email Address').col-md-12.col-xs-12
+					button#Sign_Button.btn.btn-primary(type='submit') Sign in
+					button#New_User.btn.btn-primary(type='button') New User
+					//- button#learnMore.btn.btn-primary(type='button') Learn More
+				footer.footer.row-fluid
+					small
+						a#btn-lostPass
+							| Lost Username/Password?
+
+			#info-container
+				#header
+					h1 Killing As Organized Sport
+					h2 Assassins Game Hosting
+					h3 Welcome to the live-action game that never sleeps, with variants played at campuses across the world.
+						| The premise is simple: You are given a target which you must eliminate at all costs. But know this: you will also be a target. 
+						| Your hunter will be an unknown, a ghost who lurks in the shadows. You must evade your hunter as you hunt, receiving new targets until a winner remains.
+						| KAOSgo exists to make playing and organizing these games of chaos at your school simple.
+					h3 There are some who neither relish the thrill of the hunt nor the rush of the kill, some who do not seek to reign over all.
+						| But for everyone else, there is KAOS. 
+					include parts/alert
+		//- #more-container
+		//- 		include parts/hostingRaw
+

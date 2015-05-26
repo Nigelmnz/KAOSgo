@@ -1,0 +1,11 @@
+#confirmModalAdmin.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h2 Are you sure?
+      #insideModal.modal-body
+       i.fa.fa-warning.fa-4x
+       h3 Are you absolutely 100% positively certain you want to do this? This can't be reversed!
+      .modal-footer
+       button#confirmAction.btn.btn-default(type='button', data-dismiss='modal') Do it!
+       button#cancelAction.btn.btn-default(type='button', data-dismiss='modal') No, nevermind.

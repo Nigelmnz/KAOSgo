@@ -1,0 +1,16 @@
+script(src='/js/controllers/homeBarController.js')
+
+include passwordModal
+include settingsModal
+
+nav.navbar.navbar-default
+		div.navbar-header
+			a(href="/home")
+				p#navbarMsg.navbar-text Welcome to KAOS, #{user}.
+
+
+		div.collapse.navbar-collapse
+			button#btn-logout.btn.btn-primary.navbar-btn.navbar-right
+				| Logout
+			button#btn-acct.btn.btn-primary.navbar-btn.navbar-right
+				| Settings
