@@ -1,6 +1,5 @@
 var crypto 		= require('crypto');
-var MongoDB 	= require('mongodb').Db;
-var Server 		= require('mongodb').Server;
+var MongoDB 	= require('mongodb').MongoClient;
 var moment 		= require('moment');
 var shuffle     = require('knuth-shuffle').knuthShuffle;
 var async 		= require('async');
